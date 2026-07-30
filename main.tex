@@ -35,7 +35,7 @@
 
 \articletype{RESEARCH ARTICLE}
 
-\title{Cozie Singapore: Crowdsourced Smartwatch Micro-Surveys for Thermal and Acoustic Comfort at Scale}
+\title{Cozie Singapore: Scalable crowdsourced smartwatch micro-surveys to capture urban heat and noise perception and behavior}
 
 \author{
 \name{[PLACEHOLDER: Author One\textsuperscript{a}\thanks{CONTACT [PLACEHOLDER:
@@ -73,19 +73,19 @@ wearable sensing; space-type characterization; watch-survey; Singapore]
 space types matters for urban sustainability (health, comfort, energy, liveable
 cities).]
 
-\subsection{Background and motivation}\label{sec:intro-background}
-[PLACEHOLDER: Motivate the problem. Cities in the tropics, indoor/outdoor thermal
+Motivate the problem. Cities in the tropics, indoor/outdoor thermal
 experience, the role of air-conditioning, and why understanding how people
 perceive and physiologically respond to different space types is relevant to
 sustainable urban development.]
 
-\subsection{Related work}\label{sec:intro-related}
-[PLACEHOLDER: Review prior work on (i) urban thermal comfort and microclimate,
+
+\subsection{Crowdsourcing humans-as-a-sensor data across the urban context}\label{sec:crowdsourcing}
+
+Review prior work on (i) urban thermal comfort and microclimate,
 (ii) wearable / longitudinal in-situ sensing and micro-surveys (Cozie), (iii)
 space-type or context characterization, and (iv) streetscape/urban-form
-exposure. Identify the gap this study fills.]
+exposure. Identify the gap this study fills.
 
-\subsection{Aim, research questions and contributions}\label{sec:intro-aim}
 [PLACEHOLDER: State the aim and research questions, e.g.:
 RQ1 --- How do perception, physiology and ambient weather differ across space
 types? RQ2 --- Does ambient weather help identify a space type? RQ3 --- Does
@@ -100,62 +100,53 @@ roadmap of the paper.]
 [PLACEHOLDER: One-paragraph overview of the methodological pipeline from raw
 watch-survey data to characterization and modeling.]
 
-\subsection{Study context and data collection}\label{sec:methods-context}
+\subsection{Crowdsourced watch-based micro-survey and physiological and enironmental data}\label{sec:methods-context}
 [PLACEHOLDER: Describe the ORENTH / Cozie-Singapore field study --- deployment,
 smartwatch micro-surveys, participants, study period, and Singapore urban
 context. Note participant recruitment and ethics as appropriate.]
 
-\subsection{Dataset and derived variables}\label{sec:methods-dataset}
+[Figure insert: Usk Orenth Cozie Diagram figure]
+
 [PLACEHOLDER: Describe the derived survey-level dataset
 (\texttt{cozie\_sg\_surveys\_with\_health\_aggregates}): 9{,}962 responses,
 106 participants, 99+ columns. Explain how HealthKit physiological metrics are
 aggregated to a 1-hour pre-survey window and how home locations were recovered.]
 
-\subsubsection{Perceptual (survey) variables}\label{sec:methods-perception}
+\subsubsection{Micro-survey structure}\label{sec:methods-perception}
 [PLACEHOLDER: List subjective variables --- thermal preference, noise level,
 noise kind, earphones, social context (alone/group), activity --- and their
 response categories.]
 
-\subsubsection{Physiological variables}\label{sec:methods-physio}
+[Figure insert: Usk Orenth high quality]
+
 [PLACEHOLDER: Describe 1-hour aggregates --- mean heart rate, total steps,
 walking distance.]
 
-\subsubsection{Urban-form / streetscape variables}\label{sec:methods-urbanform}
+\subsubsection{Urban contextual indicators using Urbanity}\label{sec:methods-urbanform}
 [PLACEHOLDER: Describe geolocated environmental features --- green/sky/building/
 road view, visual complexity, building count, population, POI categories.]
 
-\subsubsection{Weather variables (1-hour pre-survey)}\label{sec:methods-weather}
+\subsubsection{Weather data}\label{sec:methods-weather}
 [PLACEHOLDER: Describe the nearest-station weather aggregation --- air
 temperature, relative humidity, heat index, wind speed, rain, is-raining flag ---
 units and coverage (92--96\%). Note this is ambient, not skin-level, exposure.]
 
-\subsection{Space-type definitions}\label{sec:methods-spacetypes}
-[PLACEHOLDER: Define the six space types (Home, Office, Classroom, Other Indoor,
-Outdoor, Transportation) and the A/C grouping note (offices, classrooms and
-public transport are overwhelmingly air-conditioned; only Outdoor is ambient).]
 
-\subsection{Exploratory data analysis}\label{sec:methods-eda}
+\subsection{Data processing and characterization}\label{sec:methods-eda}
 [PLACEHOLDER: Describe the EDA strategy from notebook 01 --- univariate survey /
 health distributions, thermal relationships, temporal profiling in Singapore
 local time, and geospatial mapping.]
 
-\subsection{Statistical characterization}\label{sec:methods-stats}
 [PLACEHOLDER: Describe the characterization methods from notebook 03 ---
 perception fingerprints (row-normalized conditional proportions and lift),
 association and effect size (Kruskal--Wallis $\varepsilon^2$, chi-square /
 Cram\'er's V, Spearman $\rho$), and multivariate structure (MCA + k-modes
 clustering).]
 
-\subsubsection{Participant-nesting and effect sizes}\label{sec:methods-caveat}
-[PLACEHOLDER: State the pseudoreplication caveat (responses nested in 106
-participants make p-values anti-conservative) and that effect sizes and
-convergence across methods are the primary read-outs.]
 
-\subsection{Weather augmentation and thermal-preference test}\label{sec:methods-weathertest}
 [PLACEHOLDER: Describe how weather features augment the characterization and the
 direct test of whether thermal preference tracks actual heat index / rain.]
 
-\subsection{Discriminative modeling}\label{sec:methods-model}
 [PLACEHOLDER: Describe the space-type classifier (features = perceptions
 $\pm$ weather), validation, and importance / SHAP attribution.]
 
@@ -164,130 +155,65 @@ $\pm$ weather), validation, and importance / SHAP attribution.]
 \section{Results}\label{sec:results}
 % ============================================================================
 
-% ----- from notebook 01: 01_EDA_Aggregated -----
 \subsection{Dataset overview and survey responses}\label{sec:res-overview}
 [PLACEHOLDER: Summarize the dataset and headline distributions of survey
 responses and health metrics.]
 
-\begin{figure}[htbp]
-\centering
-% source: 5_analysis_spaces/figures/1_EDA_survey_responses.png
-\figplaceholder{survey response distributions --- 1\_EDA\_survey\_responses.png}
-\caption{[PLACEHOLDER: Distributions of key survey responses (thermal preference,
-location, noise, social context, earphones, thermal preference by location).]}
-\label{fig:survey-responses}
-\end{figure}
+[Figure insert: 01 A1]
 
-\begin{figure}[htbp]
-\centering
-% source: 5_analysis_spaces/figures/1_EDA_health_metrics.png
-\figplaceholder{health-metric distributions --- 1\_EDA\_health\_metrics.png}
-\caption{[PLACEHOLDER: Distributions and diurnal profiles of 1-hour pre-survey
-health metrics (heart rate, steps, walking distance).]}
-\label{fig:health-metrics}
-\end{figure}
-
-\subsection{Thermal and urbanity relationships}\label{sec:res-thermal-urbanity}
-[PLACEHOLDER: Describe relationships between thermal responses and health /
-urban-form variables.]
-
-\begin{figure}[htbp]
-\centering
-% sources: figures/1_EDA_thermal_relationships.png , figures/1_EDA_urbanity_features.png
-\figplaceholder{thermal relationships \& urbanity features ---
-1\_EDA\_thermal\_relationships.png / 1\_EDA\_urbanity\_features.png}
-\caption{[PLACEHOLDER: Thermal relationships and urbanity-feature associations.]}
-\label{fig:thermal-urbanity}
-\end{figure}
-
-\subsection{Response flow across the survey (Sankey)}\label{sec:res-sankey}
 [PLACEHOLDER: Describe the survey response-flow structure.]
 
-\begin{figure}[htbp]
-\centering
-% source: 5_analysis_spaces/figures/sankey_survey_reference_style.png
-\figplaceholder{Sankey flow of survey responses ---
-sankey\_survey\_reference\_style.png}
-\caption{[PLACEHOLDER: Sankey flow of survey responses.]}
-\label{fig:sankey}
-\end{figure}
+[Figure insert: sankey survey reference style pdf]
 
-\subsection{Spatial distribution of responses}\label{sec:res-geo}
+
 [PLACEHOLDER: Describe the island-wide geospatial patterns --- response density,
 spatial thermal preference, green-view exposure, heart-rate hotspots, and the
 per-space-type density facets.]
 
-\begin{figure}[htbp]
-\centering
-% sources: figures/geo_1_density.png, geo_2_thermal.png,
-%          geo_3_greenview.png, geo_4_heartrate.png, geo_facets_spacetype.png
-\figplaceholder{geospatial maps of responses across Singapore ---
-geo\_facets\_spacetype.png (+ geo\_1..4)}
-\caption{[PLACEHOLDER: Geospatial distribution of responses across Singapore,
-by space type / thermal preference / environmental exposure.]}
-\label{fig:geo}
-\end{figure}
+[Figure insert: 01 B1]
+
+[Figure insert: 01 A2]
+
+[Figure insert: 01 A3]
+
 
 \subsection{Temporal patterns of response submission}\label{sec:res-temporal}
 [PLACEHOLDER: Describe when surveys are filled out (Singapore local time) and how
 timing is strongly space-type dependent (Office/Classroom weekday-afternoon vs
 Home evening/weekend vs bimodal Transportation).]
 
-\begin{figure}[htbp]
-\centering
-% source: notebook 01 cells 27--28 (regenerate/export to figures/)
-\figplaceholder{temporal profiles by space type ---
-hour-of-day + weekday/weekend; location$\times$hour \& location$\times$day-of-week heatmaps}
-\caption{[PLACEHOLDER: Temporal submission profiles by space type.]}
-\label{fig:temporal}
-\end{figure}
+[Figure insert: 01 D2]
+
+[Figure insert: 01 D4]
 
 \subsection{Per-participant heterogeneity}\label{sec:res-participant}
 [PLACEHOLDER: Describe between-participant variation in space-type / perception
 shares (stacked bars and distribution-of-shares histograms).]
 
-% ----- from notebook 03: 03_SpaceType_Characterization_Weather -----
+[Figure insert: 01 E2]
+
+\subsection{Cooling preference}\label{sec:res-cooling}
+
+[Figure insert: 01 F2]
+
+\subsection{Noise preference}\label{sec:res-noise}
+
+[Figure insert: 01 G2]
+
+
 \subsection{Perceptual fingerprints by space type}\label{sec:res-fingerprint}
 [PLACEHOLDER: Describe the perception fingerprint (P(response$\mid$space)) and the
 lift table flagging distinctive perceptions per space type.]
 
-\begin{figure}[htbp]
-\centering
-% source: notebook 03 section A (cells 4--5)
-\figplaceholder{perception fingerprint (A.1) + lift heatmap (A.2) by space type}
-\caption{[PLACEHOLDER: Perception fingerprints and lift by space type.]}
-\label{fig:fingerprint}
-\end{figure}
 
 \subsection{Statistical association and effect size}\label{sec:res-association}
 [PLACEHOLDER: Report association strength between space type and each
 perceptual variable (Cram\'er's V), emphasizing effect sizes over p-values.]
 
-\begin{table}[htbp]
-\centering
-\caption{[PLACEHOLDER: Effect sizes (Cram\'er's V / $\varepsilon^2$) linking space
-type to perceptual, physiological and weather variables.]}
-\label{tab:effectsize}
-\begin{tabular}{lccc}
-\toprule
-Variable & Statistic & Effect size & $n$ \\
-\midrule
-[PLACEHOLDER] & [PLACEHOLDER] & [PLACEHOLDER] & [PLACEHOLDER] \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \subsection{Multivariate structure of experience}\label{sec:res-mca}
 [PLACEHOLDER: Describe MCA + k-modes clustering of the subjective experience and
 how clusters relate (or not) to space type.]
-
-\begin{figure}[htbp]
-\centering
-% source: notebook 03 section C (MCA + k-modes)
-\figplaceholder{MCA projection + k-modes experience clusters}
-\caption{[PLACEHOLDER: Multivariate structure (MCA + experience clusters).]}
-\label{fig:mca}
-\end{figure}
 
 \subsection{Physiological and weather signatures}\label{sec:res-physio-weather}
 [PLACEHOLDER: Report physiological gradient across spaces (sedentary Home to
@@ -295,53 +221,22 @@ mobile Outdoor/Transport; steps largest effect) and the weak ambient-weather
 signatures --- ambient weather barely marks space type; Outdoor is not the
 hottest.]
 
-\begin{figure}[htbp]
-\centering
-% source: notebook 03 section D
-\figplaceholder{physiological + 1-hour weather signatures by space type}
-\caption{[PLACEHOLDER: Physiological and 1-hour weather signatures by space type.]}
-\label{fig:physio-weather}
-\end{figure}
-
 \subsection{Weather versus thermal preference}\label{sec:res-weather-tp}
 [PLACEHOLDER: Report the key new result --- ``Cooler'' responses occur in
 genuinely hotter (higher heat-index) and drier conditions; rain suppresses
 cooling demand. Effect is real but modest.]
 
-\begin{figure}[htbp]
-\centering
-% source: notebook 03 section D2 (cells 21--22)
-\figplaceholder{actual weather by thermal preference (D2.1 boxplots) +
-is\_raining$\times$thermal-preference contingency (D2.2)}
-\caption{[PLACEHOLDER: Actual pre-survey weather across thermal-preference levels.]}
-\label{fig:weather-tp}
-\end{figure}
 
 \subsection{Outdoor environmental characterization}\label{sec:res-outdoor}
 [PLACEHOLDER: Restricted to Outdoor responses --- streetscape/built-form profile,
 its (weak) link to thermal preference, environment--physiology nulls, and actual
 weather vs outdoor thermal preference.]
 
-\begin{figure}[htbp]
-\centering
-% source: notebook 03 section E (cells 25+)
-\figplaceholder{outdoor environmental z-profile (E.1) + weather$\leftrightarrow$preference/physiology (E.4/E.5)}
-\caption{[PLACEHOLDER: Outdoor environmental and weather characterization.]}
-\label{fig:outdoor}
-\end{figure}
+
 
 \subsection{Discriminative modeling of space type}\label{sec:res-model}
 [PLACEHOLDER: Report the space-type classifier performance and feature importance
 (activity and noise-kind as strong space descriptors; ambient weather adds little).]
-
-\begin{figure}[htbp]
-\centering
-% source: notebook 03 section F (discriminative modeling)
-\figplaceholder{space-type classifier performance + permutation importance / SHAP}
-\caption{[PLACEHOLDER: Discriminative model of space type (perceptions
-$\pm$ weather): performance and feature importance.]}
-\label{fig:model}
-\end{figure}
 
 
 % ============================================================================
