@@ -105,7 +105,12 @@ watch-survey data to characterization and modeling.]
 smartwatch micro-surveys, participants, study period, and Singapore urban
 context. Note participant recruitment and ethics as appropriate.]
 
-[Figure insert: Usk Orenth Cozie Diagram figure]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/methods/cozie_study_design.pdf}
+\caption{[PLACEHOLDER: Study design and data-collection workflow.]}
+\label{fig:cozie-study-design}
+\end{figure}
 
 [PLACEHOLDER: Describe the derived survey-level dataset
 (\texttt{cozie\_sg\_surveys\_with\_health\_aggregates}): 9{,}962 responses,
@@ -117,7 +122,12 @@ aggregated to a 1-hour pre-survey window and how home locations were recovered.]
 noise kind, earphones, social context (alone/group), activity --- and their
 response categories.]
 
-[Figure insert: Usk Orenth high quality]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/methods/cozie_microsurvey.pdf}
+\caption{[PLACEHOLDER: Cozie smartwatch micro-survey interface and response flow.]}
+\label{fig:cozie-microsurvey}
+\end{figure}
 
 [PLACEHOLDER: Describe 1-hour aggregates --- mean heart rate, total steps,
 walking distance.]
@@ -159,22 +169,47 @@ $\pm$ weather), validation, and importance / SHAP attribution.]
 [PLACEHOLDER: Summarize the dataset and headline distributions of survey
 responses and health metrics.]
 
-[Figure insert: 01 A1]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/data_characterization/survey_battery_and_coverage.pdf}
+\caption{[PLACEHOLDER: Survey response battery, conditional follow-ups, and linked-sensor coverage (Figure A1).]}
+\label{fig:data-a1-survey-battery}
+\end{figure}
 
 [PLACEHOLDER: Describe the survey response-flow structure.]
 
-[Figure insert: sankey survey reference style pdf]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/data_characterization/survey_response_flow.pdf}
+\caption{[PLACEHOLDER: Conditional response flow through the watch-survey questionnaire.]}
+\label{fig:survey-response-flow}
+\end{figure}
 
 
 [PLACEHOLDER: Describe the island-wide geospatial patterns --- response density,
 spatial thermal preference, green-view exposure, heart-rate hotspots, and the
 per-space-type density facets.]
 
-[Figure insert: 01 B1]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/data_characterization/response_density_and_grid_counts.png}
+\caption{[PLACEHOLDER: Survey-response density and response counts by approximately 1-km grid cell across Singapore (Figure B4).]}
+\label{fig:data-b4-response-density-grid-counts}
+\end{figure}
 
-[Figure insert: 01 A2]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/data_characterization/wearable_health_windows.pdf}
+\caption{[PLACEHOLDER: Wearable-health metrics across pre-survey aggregation windows (Figure A2).]}
+\label{fig:data-a2-health-windows}
+\end{figure}
 
-[Figure insert: 01 A3]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/data_characterization/outdoor_weather_windows.pdf}
+\caption{[PLACEHOLDER: Nearest-station outdoor ambient weather across pre-survey aggregation windows (Figure A3).]}
+\label{fig:data-a3-weather-windows}
+\end{figure}
 
 
 \subsection{Temporal patterns of response submission}\label{sec:res-temporal}
@@ -182,23 +217,49 @@ per-space-type density facets.]
 timing is strongly space-type dependent (Office/Classroom weekday-afternoon vs
 Home evening/weekend vs bimodal Transportation).]
 
-[Figure insert: 01 D2]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/data_characterization/weekly_temporal_cadence.pdf}
+\caption{[PLACEHOLDER: Weekly temporal cadence of survey responses in Singapore local time (Figure D2).]}
+\label{fig:data-d2-temporal-cadence}
+\end{figure}
 
-[Figure insert: 01 D4]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/data_characterization/space_type_timing_heatmaps.pdf}
+\caption{[PLACEHOLDER: Response timing by space type, shown by hour of day and day of week (Figure D4).]}
+\label{fig:data-d4-space-time}
+\end{figure}
 
 \subsection{Per-participant heterogeneity}\label{sec:res-participant}
 [PLACEHOLDER: Describe between-participant variation in space-type / perception
 shares (stacked bars and distribution-of-shares histograms).]
 
-[Figure insert: 01 E2]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/data_characterization/participant_engagement.pdf}
+\caption{[PLACEHOLDER: Participant engagement and active survey span (Figure E2).]}
+\label{fig:data-e2-engagement}
+\end{figure}
 
 \subsection{Cooling preference}\label{sec:res-cooling}
 
-[Figure insert: 01 F2]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/data_characterization/cooling_preference.pdf}
+\caption{[PLACEHOLDER: Participant-level and contextual patterns in cooling preference (Figure F2).]}
+\label{fig:data-f2-cooling}
+\end{figure}
 
 \subsection{Noise preference}\label{sec:res-noise}
 
-[Figure insert: 01 G2]
+% The source notebook identifies this visualization as Figure G1 (not G2).
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/data_characterization/noise_characterization.pdf}
+\caption{[PLACEHOLDER: Measured sound level across subjective, participant, and location contexts (Figure G1).]}
+\label{fig:data-g1-noise}
+\end{figure}
 
 
 \subsection{Perceptual fingerprints by space type}\label{sec:res-fingerprint}
