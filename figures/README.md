@@ -1,6 +1,6 @@
 # Journal figure assets
 
-This folder contains rendered figure assets used by `../main.tex`. It contains no raw survey records or participant-level source data.
+This folder contains rendered figure assets used by `../cozie_singapore_manuscript.tex`. It contains no raw survey records or participant-level source data.
 
 ## Folder structure
 
@@ -23,9 +23,12 @@ This folder contains rendered figure assets used by `../main.tex`. It contains n
 | `data_characterization/participant_engagement.pdf` | `01_Data_Characterization.ipynb`, Figure E2 |
 | `data_characterization/cooling_preference.pdf` | `01_Data_Characterization.ipynb`, Figure F2 |
 | `data_characterization/noise_characterization.pdf` | `01_Data_Characterization.ipynb`, Figure G1 |
+| `data_characterization/perception_fingerprint_by_space_type.pdf` | `02_Space_Type_Characterization.ipynb`, Figure A1 |
+| `data_characterization/perception_lift_by_space_type.pdf` | `02_Space_Type_Characterization.ipynb`, Figure A2 |
+| `data_characterization/perception_space_adjusted_residuals.pdf` | `02_Space_Type_Characterization.ipynb`, Figure B2 |
 
 ## Regeneration
 
-The notebook contains explicit `fig.savefig(...)` / `fig_density.write_image(...)` commands for each notebook-derived asset. Execute its setup cell and the relevant labelled figure cells to regenerate the PDFs in `5_analysis_spaces/figures/`, then copy the rendered files here using the mapping above.
+The notebook contains explicit export commands for the notebook-derived assets. Execute its setup cell and the relevant labelled figure cells to regenerate the files in `5_analysis_spaces/figures/`, then copy the rendered assets here using the mapping above. Figure B4 is retained as a high-resolution PNG; the remaining notebook-derived assets are PDFs.
 
-`main.tex` intentionally retains placeholder captions. Captions, interpretation, and manuscript prose are to be supplied and approved by the authors.
+`cozie_singapore_manuscript.tex` intentionally retains placeholder captions. Captions, interpretation, and manuscript prose are to be supplied and approved by the authors.
