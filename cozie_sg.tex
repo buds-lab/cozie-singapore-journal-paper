@@ -64,7 +64,7 @@ Despite this effort, significant elements of the human experience in the urban c
 Physical measurements alone are weak predictors of how occupants actually judge their surroundings, because non-physical and psychological factors shape perception \citep{Castaldo2018-ih}, and expectations condition the same measured conditions differently \citep{Schweiker2020-pw}.
 Even the most widely used comfort model predicts individual thermal sensation with limited accuracy across large field datasets \citep{Cheung2019-fs}, underscoring the gap between what sensors record and how conditions are judged.
 Image-based surveys offer one way to elicit perception at scale, asking people to rate qualities such as safety, liveliness, and greenery from street-view imagery \citep{Ito2024-fs,Gu2025-fp}.
-However, this perception is elicited from viewing scenes remotely rather than from lived, in-situ experience, so it misses characterizing physical responses from senses beyond sight such environmental and social factors \citep{Quintana2025-tn}.
+However, this perception is elicited from viewing scenes remotely rather than from lived, in-situ experience, so it misses characterizing physical responses from senses beyond sight, as well as environmental and social factors \citep{Quintana2025-tn}.
 Capturing perception directly has a long methodological basis in ecological momentary assessment and experience sampling, which record subjective states in real time and in context \citep{Stone1994-he,Christensen2003-zn}, and pairing these reports with location data extends them to the geographically explicit case \citep{Kirchner2016-dq}.
 
 \subsection{Crowdsourcing humans-as-a-sensor data across the urban context}\label{sec:crowdsourcing}
@@ -181,7 +181,7 @@ Under independence each $z_{ij}$ is asymptotically standard normal, so cells wit
 \section{Results}\label{sec:results}
 % ============================================================================
 
-The collected data support the analysis of the volume, coverage, and timing of the responses, to the distributions of the survey and its linked physiological and weather measurements, and then to how the reported experience differs across the everyday spaces in which it was recorded.
+The collected data support an analysis that moves from the volume, coverage, and timing of the responses, to the distributions of the survey and its linked physiological and weather measurements, and then to how the reported experience differs across the everyday spaces in which it was recorded.
 
 \subsection{Data collection, coverage, and temporal characteristics}\label{sec:res-data-collection}
 
@@ -198,7 +198,7 @@ The coverage is therefore broad but uneven, anchored to where participants live 
 
 Figure~\ref{fig:data-e2-engagement} illustrates the breakdown of data collection across the cohort of 106 participants.
 Contribution is spread evenly enough that no small group dominates the dataset, with a median of 98 responses per person, close to the 100-survey target, and the most active tenth of participants supplying only about 12\% of the total.
-The range from 17 to 158 responses does mean that some participants are somewhat unequally represented, the analyses that follow rely on within-space proportions and effect sizes rather than raw response counts.
+The range from 17 to 158 responses does mean that some participants are somewhat unequally represented, but the analyses that follow rely on within-space proportions and effect sizes rather than raw response counts.
 
 \begin{figure}[htbp]
 \centering
@@ -232,19 +232,17 @@ Timing alone already begins to separate the spaces before any perception is cons
 
 \subsection{Survey responses and linked temporal data coverage}\label{sec:res-survey-overview}
 Figure~\ref{fig:data-a1-survey-battery} gives the overall distribution of every question, and read together the panels sketch the typical moment a participant reported.
-Thermal preference is strongly asymmetric.
-A small majority want \emph{No change} (54\%), almost all of the rest want to be \emph{Cooler} (40\%), and \emph{Warmer} is rare (6\%).
+Thermal preference is strongly asymmetric, with a small majority wanting \emph{No change} (54\%), almost all of the rest wanting to be \emph{Cooler} (40\%), and \emph{Warmer} rare (6\%).
 This is the expected pattern for a warm, humid climate, though it also reflects that many indoor spaces are air-conditioned rather than exposed to the outdoor weather.
 Perceived noise is more balanced, with roughly equal shares reporting \emph{None} (46\%) and \emph{A little} (44\%) and only about one in ten reporting \emph{A lot}.
 Noticing some noise is the norm, while strong distraction is uncommon.
 Where noise is present, the follow-up question attributes it most often to people talking (44\% of noise-kind responses), well ahead of appliances and traffic, so the main acoustic nuisance in this cohort is human rather than mechanical.
 
 The other panels place these responses in context.
-Most responses come from home (45\%), participants are usually \emph{Alone} (72\%) rather than in a \emph{Group}, and the activity questions show focused work and leisure in solitary moments and socialising in group ones.
+Most responses come from home (45\%), participants are usually \emph{Alone} (72\%) rather than in a \emph{Group}, and the activity questions show focused work and leisure in solitary moments and socializing in group ones.
 Earphone use is uncommon even though the question is reached in about half of surveys, as most of those responses report \emph{No earphones} and active noise canceling is rare.
 Participants therefore seem to tolerate rather than mask their sound environment.
-The coverage panel shows why the linked analysis is feasible, since the one-hour pre-survey window carries weather for about 96\% of surveys and heart rate, movement, and measured noise for roughly 90\%.
-Nearly every self-report has matching sensor data.
+The coverage panel shows why the linked analysis is feasible, since the one-hour pre-survey window carries weather for about 96\% of surveys and heart rate, movement, and measured noise for roughly 90\%, so nearly every self-report has matching sensor data.
 
 \begin{figure}[htbp]
 \centering
@@ -303,8 +301,7 @@ Across all responses, the share of \emph{Cooler} answers rises with outdoor heat
 This is the expected direction for a tropical setting, though the outdoor reading is only a proxy for the participant's actual microclimate, which is often a controlled indoor space rather than the outdoor weather.
 The link is much weaker between people than within the heat range.
 A participant's mean outdoor temperature explains little of who wants cooling ($r \approx 0.33$), and the per-participant panel is very wide, with the \emph{Cooler} share running from under 10\% for the most heat-tolerant participants to nearly 80\% for the most cooling-seeking.
-This spread is the main point of the figure.
-Cooling preference is as much a personal trait as a response to measured conditions, and this is the individual variation that person-level sensing is designed to capture.
+This spread is the main point of the figure, showing that cooling preference is as much a personal trait as a response to measured conditions, the individual variation that person-level sensing is designed to capture.
 
 The same characterization for the sound environment is given in Figure~\ref{fig:data-g1-noise}, using the linked one-hour sound-level measurement, and here the self-reports and the sensor agree well.
 Measured sound level rises steadily with perceived noise, from a median near 62\,dB for \emph{None} to 66\,dB for \emph{A little} and 70\,dB for \emph{A lot}.
@@ -333,13 +330,12 @@ With each perception characterized on its own, the analysis now asks how the rep
 It does so in three layers that build on one another.
 The first layer, in Figure~\ref{fig:space-perception-fingerprint}, reads each space type as a profile by normalizing within its own row.
 Every cell gives the probability of a response given the space, so each row describes the mix of experiences in that setting rather than how many responses it contributed.
-Read this way, the spaces separate into recognisable characters.
+Read this way, the spaces separate into recognizable characters.
 Home is a quiet, solitary setting, with most responses reporting \emph{None} for noise and about 84\% reporting \emph{Alone}, while classrooms and other-indoor spaces are mostly social.
 The commute spaces stand out for discomfort, with the highest shares of \emph{A lot} of noise, reaching roughly one in four responses in transportation against only about 3\% at home.
 Thermal preference shifts more gently, from only about a quarter of office responses wanting \emph{Cooler} to just over half of outdoor responses.
 This fits the heavily air-conditioned office and the exposed outdoor setting, and it is a reminder that thermal preference reflects the immediate controlled environment more than the outdoor weather.
-The fingerprint is intuitive but has one limit.
-Because some responses are common everywhere, a high within-space probability does not by itself mean the response is characteristic of that space.
+The fingerprint is intuitive but has one limit, since some responses are common everywhere and a high within-space probability does not by itself mean the response is characteristic of that space.
 
 \begin{figure}[htbp]
 \centering
@@ -354,8 +350,7 @@ This turns a profile into a signature, because it isolates what is distinctive t
 The contrast sharpens the same story and adds detail the fingerprint hides.
 \emph{A lot} of noise is over-represented by about 2.6 times in transportation and 2.4 times outdoors, \emph{Group} is over-represented most in classrooms (lift near 2.1), and \emph{Warmer}, a rare response overall, is concentrated in the office (lift near 1.6) where air-conditioning can overshoot.
 Lift also makes the source of noise a spatial fingerprint in its own right, as traffic accounts for most reported noise in transportation and a large share outdoors, while talking dominates the noise reported in classrooms and offices.
-The limit of lift mirrors that of the fingerprint.
-It flags distinctive combinations but does not show whether any single contrast is larger than chance would produce.
+The limit of lift mirrors that of the fingerprint, since it flags distinctive combinations but does not show whether any single contrast is larger than chance would produce.
 
 \begin{figure}[htbp]
 \centering
@@ -386,7 +381,7 @@ This weak thermal signal is consistent with people often being in controlled ind
 % ============================================================================
 
 The three analytical layers converge on a coherent characterization of how urban space types differ in reported experience.
-The clearest separations are behavioral and acoustic rather than thermal: what people are doing and hearing identifies a space far more sharply than how warm they feel.
+The clearest separations are behavioral and acoustic rather than thermal, since what people are doing and hearing identifies a space far more sharply than how warm they feel.
 Tables~\ref{tab:insights-acoustic} and~\ref{tab:insights-social-thermal} collect the findings that reinforce prior expectation and establish this baseline character of each setting, grouped by the acoustic environment and by social context and thermal comfort.
 Each entry pairs a short insight with the supporting detail drawn from the fingerprint, lift, and residual analyses of Section~\ref{sec:res-fingerprint-association}.
 
@@ -436,7 +431,7 @@ Generalizability is the clearest limitation, as the findings come from 106 parti
 Recruitment was by convenience rather than through a representative sampling frame, so the reported patterns describe this cohort in Singapore and should not be read as population-level estimates.
 The setting itself also limits transfer, since Singapore is a dense, tropical, heavily air-conditioned city, and the thermal results in particular reflect that context more than a general climate response.
 
-The structure of the data, rather than a controlled design, also shapes what the analysis can claim: although there are 9{,}962 responses, they are nested within only 106 participants, so responses from the same person are not independent.
+The structure of the data, rather than a controlled design, also shapes what the analysis can claim. Although there are 9{,}962 responses, they are nested within only 106 participants, so responses from the same person are not independent.
 We therefore treat the associations and significance markers as descriptive screens rather than formal tests, and we do not fit a model that accounts for this clustering.
 Perceptions are self-reported through single-item micro-surveys answered in the moment, and the reported space type is a participant label rather than a verified location, so both carry the usual subjectivity and recall effects of momentary self-report.
 
@@ -445,17 +440,17 @@ Within-space cells built from few responses are noisier than their shading sugge
 Linked streams are also uneven, as some physiological signals such as blood-oxygen and resting heart rate are sparse, and the early-morning hours are thinly sampled, with under 2\% of responses before 08:00, so temporal patterns in those hours are weak.
 The space types themselves are unbalanced, with nearly half of all responses coming from home, so the corpus-wide baselines used for lift are weighted toward the most common settings.
 
-A final pair of limitations concerns exposure and scope: the weather values are aggregated from the nearest station and describe ambient outdoor conditions rather than the microclimate or skin-level exposure each participant actually experienced, a coarse proxy especially for the indoor and air-conditioned settings where many responses were made.
+Exposure and scope raise a final pair of limitations, beginning with the weather values, which are aggregated from the nearest station and describe ambient outdoor conditions rather than the microclimate or skin-level exposure each participant actually experienced, a coarse proxy especially for the indoor and air-conditioned settings where many responses were made.
 Finally, the deployment ran in two phases that differed in how just-in-time messages were triggered, and the present analysis pools across them, so it characterizes reported experience and does not isolate any effect the intervention messages may have had on what participants reported or did.
 
 \subsection{Future work}\label{sec:disc-future}
-The most direct next step is to broaden the cohort: larger deployments that run on participants' own smartwatches, rather than on loaned devices, could reach hundreds or thousands of people and a wider mix of ages, occupations, and living situations than the mostly student sample here.
+The most direct next step is to broaden the cohort through larger deployments that run on participants' own smartwatches, rather than on loaned devices, which could reach hundreds or thousands of people and a wider mix of ages, occupations, and living situations than the mostly student sample here.
 A more diverse cohort would let the reported patterns be tested for generalizability rather than described for one group, and replication in other cities would show which findings are specific to a dense, tropical, air-conditioned setting and which hold more widely.
 
 Future analyses could also treat the nested structure of the data directly, using mixed-effects or otherwise participant-grouped models that account for repeated responses from the same person, turning the descriptive associations reported here into estimates with proper uncertainty and supporting participant-grouped validation for any predictive work built on the same data. Exposure measurement could improve by pairing the micro-surveys with personal or wearable microclimate and air-quality sensing, such as on-body temperature, humidity, and sound level, where guidance on low-cost sensors is now maturing \citep{Parkinson2026-am}, which would replace the coarse nearest-station weather with the conditions each participant actually experienced and would matter most in the indoor and air-conditioned settings that dominate the responses.
 
 The survey design itself could become more targeted, with prompts that adapt to where a person is and to the specific subjective question a deployment is meant to answer, concentrating responses where they are most informative and filling the thinly sampled settings and hours noted above.
-Building on this, a deeper characterization of participants who share patterns of behavior could establish behavioral archetypes, which would help identify which patterns to encourage through design and which to discourage before they become common. In addition, longer and more structured deployments would extend the scope: running over months rather than weeks would capture seasonal and longer-term variation, and designs that separate or randomize the just-in-time intervention phases would let future work isolate the effect of the messages on reported experience and behavior, which the present pooled analysis cannot.
+Building on this, a deeper characterization of participants who share patterns of behavior could establish behavioral archetypes, which would help identify which patterns to encourage through design and which to discourage before they become common. In addition, longer and more structured deployments would extend the scope, since running over months rather than weeks would capture seasonal and longer-term variation, and designs that separate or randomize the just-in-time intervention phases would let future work isolate the effect of the messages on reported experience and behavior, which the present pooled analysis cannot.
 
 % ============================================================================
 \section{Conclusion}\label{sec:conclusion}
