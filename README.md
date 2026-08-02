@@ -4,7 +4,7 @@ LaTeX source and publication figures for the Cozie Singapore manuscript prepared
 
 ## Repository contents
 
-- `cozie_singapore_manuscript.tex` — manuscript source using the Taylor & Francis `interact` class.
+- `cozie_sg.tex` — manuscript source using the Taylor & Francis `interact` class.
 - `cozie_singapore_references.bib` — project bibliography; cite entries with `\citep{key}` or `\citet{key}`.
 - `figures/` — rendered manuscript figures only. See [`figures/README.md`](figures/README.md) for source and regeneration mapping.
 - `interact.cls` and `*.sty` — publisher-template class and local style dependencies.
@@ -16,10 +16,10 @@ This repository does not include raw survey data, participant locations, or anal
 Compile from this directory with a TeX distribution that includes `latexmk`, `apacite`, and `natbib`:
 
 ```bash
-latexmk -pdf cozie_singapore_manuscript.tex
+latexmk -pdf cozie_sg.tex
 ```
 
-The generated PDF is `cozie_singapore_manuscript.pdf`. Temporary LaTeX build products are excluded through `.gitignore`.
+The generated PDF is `cozie_sg.pdf`. Temporary LaTeX build products are excluded through `.gitignore`.
 
 ## Manuscript status
 

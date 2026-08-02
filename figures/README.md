@@ -1,6 +1,6 @@
 # Journal figure assets
 
-This folder contains rendered figure assets used by `../cozie_singapore_manuscript.tex`. It contains no raw survey records or participant-level source data.
+This folder contains rendered figure assets used by `../cozie_sg.tex`. It contains no raw survey records or participant-level source data.
 
 ## Folder structure
 
@@ -31,4 +31,4 @@ This folder contains rendered figure assets used by `../cozie_singapore_manuscri
 
 The notebook contains explicit export commands for the notebook-derived assets. Execute its setup cell and the relevant labelled figure cells to regenerate the files in `5_analysis_spaces/figures/`, then copy the rendered assets here using the mapping above. Figure B4 is retained as a high-resolution PNG; the remaining notebook-derived assets are PDFs.
 
-`cozie_singapore_manuscript.tex` intentionally retains placeholder captions. Captions, interpretation, and manuscript prose are to be supplied and approved by the authors.
+`cozie_sg.tex` intentionally retains placeholder captions. Captions, interpretation, and manuscript prose are to be supplied and approved by the authors.
