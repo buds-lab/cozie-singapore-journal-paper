@@ -47,7 +47,7 @@ The everyday experience of urban space is shaped as much by how people perceive 
 \end{abstract}
 
 \begin{keywords}
-crowdsourced micro-surveys; wearable sensing; thermal comfort; urban noise perception; human-centered urban design; tropical cities
+Micro-ecological momentary assessments; Wearable sensing; Thermal preference; Urban noise perception; Human-centered urban design; Tropical cities
 \end{keywords}
 
 % ============================================================================
@@ -80,7 +80,7 @@ The same micro-survey approach has since been applied to characterize sleep habi
 This study was developed as a follow-on effort to scale up this data collection, with a focus on heat and noise in the urban context.
 Both exposures are central to the everyday experience of a dense tropical city, where thermal comfort is a persistent concern and noise is a leading source of distraction and dissatisfaction \citep{Appel-Meulenbroek2020-bp}.
 Individuals also differ substantially in how they perceive the same conditions, which has driven a shift toward personal comfort models built at the level of the person rather than the building, since people differ in their intrinsic thermal sensitivity \citep{Wang2018-aj,Arakawa_Martins2022-vh,Rupp2022-lq}.
-Linking these reports to geolocated urban context connects them to the digital-twin models increasingly used to represent cities \citep{Miller2021-bm,Ignatius2024-ii}.
+Linking these reports to geolocated urban context connects them to the digital-twin models increasingly used to represent cities \citep{Ignatius2024-ii}.
 The resulting dataset previously supported a public machine-learning competition on predicting heat and noise perception from contextual data \citep{Miller2023-wi,Miller2025-qu}, and this paper instead characterizes the collected experience itself across the range of everyday urban spaces.
 
 % ============================================================================
@@ -105,7 +105,7 @@ Some participants provided responses outside the parameters in these guidelines 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.92\textwidth]{figures/methods/cozie_study_design.pdf}
-\caption{Cozie Singapore study design linking crowdsourced smartwatch micro-surveys (left) to the wearable-sensor and urban spatial data each response is joined to (right).}
+\caption{Overview of study design linking crowdsourced smartwatch micro-surveys (simple examples of questions on left) to the wearable-sensor and urban spatial data each response is joined to (right) (Adapted from \citep{Miller2022-dy}).}
 \label{fig:cozie-study-design}
 \end{figure}
 
@@ -113,7 +113,7 @@ The deployment ran in two phases that differed in how just-in-time intervention 
 As summarized in Figure~\ref{fig:cozie-study-design}, each watch-based micro-survey response is time-stamped and geolocated, and is paired with the wearer's onboard physiological signals and with linked outdoor weather and urban-context data.
 The present analysis draws on a slightly different prepared dataset from this deployment, comprising 9{,}962 micro-survey responses from 106 participants, and focuses on characterizing the reported experience rather than the intervention outcomes. 
 
-Each micro-survey is a short set of questions answered directly on the watch face, shown in Figure~\ref{fig:cozie-microsurvey}.
+Figure~\ref{fig:cozie-microsurvey} illustrates the set of micro-survey questions answered directly on the watch face at each full submission instance.
 A response records the participant's thermal preference (\emph{Cooler}, \emph{No change}, or \emph{Warmer}) and the level of nearby noise (\emph{None}, \emph{A little}, or \emph{A lot}).
 When noise is present, follow-up questions capture the kind of noise and whether earphones are being worn.
 The survey also records the reported location or space type, whether the participant is \emph{Alone} or in a \emph{Group}, and the activity being performed, with the activity options depending on whether the participant is alone or with others.
@@ -122,7 +122,7 @@ Several of these questions are conditional, so later items such as noise kind an
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1\textwidth]{figures/methods/cozie_microsurvey.pdf}
-\caption{Smartwatch micro-survey interface showing the left-to-right flow of watch screens from the core questions and their conditional follow-ups to submission.}
+\caption{Full smartwatch micro-survey structure showing the left-to-right flow of watch screens from the core questions and their conditional follow-ups to submission (Adapted from \citep{Miller2022-dy})}
 \label{fig:cozie-microsurvey}
 \end{figure}
 
@@ -149,7 +149,7 @@ For each space type $s$ and response category $r$, the conditional proportion is
 \hat{P}(\mathrm{response}=r \mid \mathrm{space}=s) = \frac{n_{rs}}{n_{s}},
 \end{equation}
 where $n_{rs}$ is the number of responses of category $r$ in space $s$ and $n_{s}$ is the total number of responses in that space.
-Each row therefore describes a single space's own response profile and sums to one within each survey variable, which is the fingerprint shown in Figure~\ref{fig:space-perception-fingerprint}.
+Each row therefore describes a single space's own response profile and sums to one within each survey variable.
 No smoothing or shrinkage is applied, so cells based on few responses are noisier than their shading suggests.
 
 \subsubsection{Relative distinctiveness through lift}\label{sec:methods-lift}
@@ -157,7 +157,7 @@ To separate what is distinctive to a space from what is simply common everywhere
 \begin{equation}
 \mathrm{lift}(r,s) = \frac{P(\mathrm{response}=r \mid \mathrm{space}=s)}{P(\mathrm{response}=r)}.
 \end{equation}
-A value of one indicates a response that is as common in the space as in the corpus overall, values above one indicate over-representation, and values below one indicate under-representation, as shown in Figure~\ref{fig:space-perception-lift}.
+A value of one indicates a response that is as common in the space as in the corpus overall, values above one indicate over-representation, and values below one indicate under-representation.
 
 \subsubsection{Association strength and cell-level contrasts}\label{sec:methods-association}
 The overall association between space type and each perception was tested with a Pearson chi-square statistic on the $r \times k$ contingency table,
@@ -175,7 +175,7 @@ To identify which individual space and response combinations drive the associati
 z_{ij} = \frac{O_{ij}-E_{ij}}{\sqrt{E_{ij}\,(1-r_{i}/n)\,(1-c_{j}/n)}},
 \end{equation}
 where $r_{i}$ and $c_{j}$ are the row and column totals and $n$ is the grand total.
-Under independence each $z_{ij}$ is asymptotically standard normal, so cells with $|z|>1.96$, $2.58$, and $3.29$ exceed the conventional $0.05$, $0.01$, and $0.001$ thresholds and mark the space and response pairs shown as over- or under-represented in Figure~\ref{fig:space-perception-residuals}.
+Under independence, each $z_{ij}$ is asymptotically standard normal, so cells with $|z|>1.96$, $2.58$, and $3.29$ exceed the conventional $0.05$, $0.01$, and $0.001$ thresholds and mark the space and response pairs shown as over- or under-represented.
 
 % ============================================================================
 \section{Results}\label{sec:results}
@@ -266,7 +266,7 @@ The common home, solitary, and \emph{No change} or \emph{Cooler} responses form 
 The linked wearable-health streams appear in Figure~\ref{fig:data-a2-health-windows}, each summarized over the six-hour, one-hour, and ten-minute windows before a survey.
 The window matters most for the movement metrics.
 Median step count and walking distance fall as the window narrows, from about 85 to 42 steps per reading between the six-hour and ten-minute windows, because a short look-back captures only the last few minutes of activity.
-Heart rate is far more stable at roughly 80\,bpm across all three windows.
+Heart rate is more stable at roughly 80\,bpm across all three windows.
 Coverage moves the other way and limits how tight the window can be.
 The six-hour window carries movement and noise for over 95\% of surveys, but at ten minutes audio coverage falls to about a third and step coverage to little more than half.
 Resting heart rate and blood-oxygen streams are sparse in every window.
@@ -381,16 +381,14 @@ This weak thermal signal is consistent with people often being in controlled ind
 % ============================================================================
 
 The three analytical layers converge on a coherent characterization of how urban space types differ in reported experience.
-The clearest separations are behavioral and acoustic rather than thermal, since what people are doing and hearing identifies a space far more sharply than how warm they feel.
+The clearest separations are behavioral and acoustic rather than thermal, since what people are doing and hearing identifies a space more sharply than how warm they feel.
 Tables~\ref{tab:insights-acoustic} and~\ref{tab:insights-social-thermal} collect the findings that reinforce prior expectation and establish this baseline character of each setting, grouped by the acoustic environment and by social context and thermal comfort.
 Each entry pairs a short insight with the supporting detail drawn from the fingerprint, lift, and residual analyses of Section~\ref{sec:res-fingerprint-association}.
 
 \input{tables/insights_acoustic}
 \input{tables/insights_social_thermal}
 
-These reinforcing findings are less a surprise than a sign that a watch-based micro-survey recovers a structure of urban experience that other methods have already documented.
-
-The acoustic results match this earlier work.
+The findings show that a watch-based micro-survey recovers the structure of human perception in the urban context, some of which aligns with previous studies.
 Commute spaces carry the highest \emph{a lot} noise shares, and traffic dominates their reported noise source.
 This agrees with mobile-exposure studies of commuters, where personal exposure to traffic noise and air pollution is context-dependent and is best captured by pairing wearable measurement with reports taken on the move \citep{Marquart2022-rt}.
 It also agrees with spatio-temporal urban assessments that place the loudest ambient conditions in traffic-dense cores rather than in residential or green areas \citep{Kumar2013-if}, and with survey evidence that residential road-traffic noise is a dominant source of annoyance \citep{Preisendorfer2022-qh}.
@@ -403,7 +401,7 @@ Tables~\ref{tab:insights-counterintuitive} and~\ref{tab:insights-behaviour} gath
 \input{tables/insights_counterintuitive}
 \input{tables/insights_behavioural_analytical}
 
-That activity is the sharpest spatial marker aligns with behavioral accounts of how occupants interact with their environments \citep{Heydarian2020-is} and with evidence that movement and exposure are spatially structured within a single setting \citep{Pollard2022-gl}.
+The fact that activity is the sharpest spatial marker aligns with behavioral accounts of how occupants interact with their environments \citep{Heydarian2020-is} and with evidence that movement and exposure are spatially structured within a single setting \citep{Pollard2022-gl}.
 
 \subsection{Implications for sustainable urban design}\label{sec:disc-implications}
 These results help close the loop between how planners assume occupants behave and perceive their surroundings and how occupants actually report experiencing them.
@@ -422,12 +420,12 @@ Offices show the lowest cooling demand of any space, with only about a quarter o
 Outdoor spaces show the highest cooling demand, which points to shading, greenery, and other passive cooling of public space as the priority for thermal relief.
 Thermal preference is the weakest spatial marker and reflects the immediate controlled setting more than the outdoor weather, so comfort here is set mainly by the indoor environments people occupy rather than by climate alone.
 
-Finally, the layered reading used here fits a broader move toward multi-method assessment of urban perception that combines subjective, physiological, and spatial data, as in work that joins participatory mapping, neurophysiological response, and self-reported emotion to study perceived walkability \citep{Yildirim2026-rg}.
+The layered reading used here fits a broader move toward multi-method assessment of urban perception that combines subjective, physiological, and spatial data, as in work that joins participatory mapping, neurophysiological response, and self-reported emotion to study perceived walkability \citep{Yildirim2026-rg}.
 Because the same watch-based platform has already supported city-scale prediction of noise distraction and thermal preference \citep{Miller2025-qu}, the structure described here could feed predictive, just-in-time design tools embedded in urban digital twins \citep{Lei2026-dn} and the urban-scale occupant-behavior models used to anticipate building energy demand \citep{Salim2020-ec}, tools that anticipate where and when discomfort arises.
 Heat and noise are only two of the dimensions such an instrument can capture, and the same loop could be closed for others.
 
 \subsection{Limitations}\label{sec:disc-limitations}
-Generalizability is the clearest limitation, as the findings come from 106 participants in a young and homogeneous cohort, with roughly 73\% aged 18 to 30 and most recruited as students at a single university.
+Generalizability is the clearest limitation, as the findings come from 106 participants in a young and homogeneous cohort, with roughly 73\% aged 18 to 30 and most recruited as university students.
 Recruitment was by convenience rather than through a representative sampling frame, so the reported patterns describe this cohort in Singapore and should not be read as population-level estimates.
 The setting itself also limits transfer, since Singapore is a dense, tropical, heavily air-conditioned city, and the thermal results in particular reflect that context more than a general climate response.
 
@@ -445,12 +443,12 @@ Finally, the deployment ran in two phases that differed in how just-in-time mess
 
 \subsection{Future work}\label{sec:disc-future}
 The most direct next step is to broaden the cohort through larger deployments that run on participants' own smartwatches, rather than on loaned devices, which could reach hundreds or thousands of people and a wider mix of ages, occupations, and living situations than the mostly student sample here.
-A more diverse cohort would let the reported patterns be tested for generalizability rather than described for one group, and replication in other cities would show which findings are specific to a dense, tropical, air-conditioned setting and which hold more widely.
+A more diverse cohort would allow the reported patterns to be tested for generalizability rather than described for one group, and replication in other cities would show which findings are specific to a dense, tropical, air-conditioned setting and which hold more broadly.
 
 Future analyses could also treat the nested structure of the data directly, using mixed-effects or otherwise participant-grouped models that account for repeated responses from the same person, turning the descriptive associations reported here into estimates with proper uncertainty and supporting participant-grouped validation for any predictive work built on the same data. Exposure measurement could improve by pairing the micro-surveys with personal or wearable microclimate and air-quality sensing, such as on-body temperature, humidity, and sound level, where guidance on low-cost sensors is now maturing \citep{Parkinson2026-am}, which would replace the coarse nearest-station weather with the conditions each participant actually experienced and would matter most in the indoor and air-conditioned settings that dominate the responses.
 
 The survey design itself could become more targeted, with prompts that adapt to where a person is and to the specific subjective question a deployment is meant to answer, concentrating responses where they are most informative and filling the thinly sampled settings and hours noted above.
-Building on this, a deeper characterization of participants who share patterns of behavior could establish behavioral archetypes, which would help identify which patterns to encourage through design and which to discourage before they become common. In addition, longer and more structured deployments would extend the scope, since running over months rather than weeks would capture seasonal and longer-term variation, and designs that separate or randomize the just-in-time intervention phases would let future work isolate the effect of the messages on reported experience and behavior, which the present pooled analysis cannot.
+Building on this, a deeper characterization of participants who share behavioral patterns could establish behavioral archetypes, helping identify which patterns to encourage through design and which to discourage before they become common. In addition, longer and more structured deployments would extend the scope, since running over months rather than weeks would capture seasonal and longer-term variation, and designs that separate or randomize the just-in-time intervention phases would let future work isolate the effect of the messages on reported experience and behavior, which the present pooled analysis cannot.
 
 % ============================================================================
 \section{Conclusion}\label{sec:conclusion}
