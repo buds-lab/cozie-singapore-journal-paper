@@ -43,7 +43,7 @@ Mario Frei\textsuperscript{b} and Yun Xuan Chua\textsuperscript{c}}
 \maketitle
 
 \begin{abstract}
-The everyday experience of urban space is shaped as much by how people perceive heat, noise, and their social surroundings as by the physical conditions that sensors record. This paper characterizes how that lived experience differs across the common spaces of a dense tropical city using crowdsourced, watch-based micro-surveys collected with the open-source Cozie smartwatch platform. A field deployment in Singapore with 106 participants produced 9{,}962 geolocated micro-survey responses, each pairing self-reported thermal preference, noise, social context, and activity with the wearer's onboard physiological signals and with linked outdoor weather. Every response was assigned to one of six everyday space types, and the reported experience was characterized through conditional perception fingerprints, relative distinctiveness expressed as lift, and effect-size-based association testing using the chi-square statistic, Cram\'er's V, and adjusted standardized residuals. The strongest separations between spaces are behavioral and acoustic rather than thermal, as what a person is doing and hearing identifies a space far more sharply (Cram\'er's V up to $0.38$) than how warm they feel ($0.12$). Commute spaces carry the loudest and most traffic-driven noise, indoor spaces are defined by talking, and cooling demand is lowest in air-conditioned offices and highest outdoors, while thermal preference tracks the immediate controlled environment more than the outdoor weather. These findings show that a scalable smartwatch micro-survey can recover and quantify the perceptual signature of everyday urban spaces, offering a human-centered evidence base for noise mitigation and for energy-conscious, thermal-comfort-aware urban design in tropical cities.
+The everyday experience of urban space is shaped as much by how people perceive heat, noise, and their social surroundings as by the physical conditions that sensors record. This paper characterizes how that lived experience differs across the common spaces of a dense tropical city using crowdsourced, watch-based micro-surveys collected with the open-source Cozie smartwatch platform. A field deployment in Singapore with 106 participants produced 9{,}962 geolocated micro-survey responses, each pairing self-reported thermal preference, noise, social context, and activity with the wearer's onboard physiological signals and with linked outdoor weather. Every response included a self-reported location in one of six everyday space types, and the reported experience was characterized through conditional perception fingerprints, relative distinctiveness expressed as lift, and effect-size-based association testing using the chi-square statistic, Cram\'er's V, and adjusted standardized residuals. The strongest separations between spaces are behavioral and acoustic rather than thermal, as what a person is doing and hearing identifies a space far more sharply (Cram\'er's V up to $0.38$) than how warm they feel ($0.12$). Commute spaces carry the loudest and most traffic-driven noise, indoor spaces are defined by talking, and cooling demand is lowest in air-conditioned offices and highest outdoors, while thermal preference tracks the immediate controlled environment more than the outdoor weather. These findings show that a scalable smartwatch micro-survey can recover and quantify the perceptual signature of everyday urban spaces, offering a human-centered evidence base for noise mitigation and for energy-conscious, thermal-comfort-aware urban design in tropical cities.
 \end{abstract}
 
 \begin{keywords}
@@ -94,13 +94,14 @@ Because the platform continuously records location and physiological signals, th
 The remainder of this section describes the field study and participants, the structure of the micro-survey, the linked wearable, weather, and urban-context data, and the processing steps that produce the survey-level dataset used for the characterization that follows.
 
 \subsection{Crowdsourced watch-based micro-survey and physiological and environmental data}\label{sec:methods-context}
-The field study reported here is the same deployment described in detail by \citet{Miller2025-sv}, and the following is a summary of that protocol, illustrated in Figure~\ref{fig:cozie-study-design}.
+The field study reported here is the same deployment described in detail by \citet{Miller2025-sv}, and the following is a summary of that protocol. 
+The key elements of the protocol that are used in this analysis are illustrated in Figure~\ref{fig:cozie-study-design}.
 Participants were recruited through the National University of Singapore (NUS) Student Work Scheme and by word of mouth, producing a pool made up mostly of NUS students together with a smaller number of adults from outside the university.
 The cohort was predominantly young, with roughly 73\% aged 18 to 30, and comprised 39\% male and 61\% female participants, and ethical approval was granted by the NUS Institutional Review Board.
 Each participant used an Apple Watch running the Cozie application paired with an iPhone, and loan devices were provided to those who lacked a compatible watch or phone.
 Participants were asked to wear the watch during working hours, at least from 9\,AM to 7\,PM on weekdays, for approximately four weeks.
 They were instructed to complete at least 100 micro-surveys together with weekly surveys and an in-person exit interview. 
-Some participants provided responses outside the parameters in these guidelines and those submitted within Singapore were retained.
+Some participants provided responses outside the parameters in these guidelines and those submitted within Singapore were retained in this analysis.
 
 \begin{figure}[htbp]
 \centering
@@ -110,7 +111,7 @@ Some participants provided responses outside the parameters in these guidelines 
 \end{figure}
 
 The deployment ran in two phases that differed in how just-in-time intervention messages were triggered.
-As summarized in Figure~\ref{fig:cozie-study-design}, each watch-based micro-survey response is time-stamped and geolocated, and is paired with the wearer's onboard physiological signals and with linked outdoor weather and urban-context data.
+As shown in Figure~\ref{fig:cozie-study-design}, each watch-based micro-survey response is time-stamped and geolocated, and is paired with the wearer's onboard physiological signals and with linked outdoor weather and urban-context data.
 The present analysis draws on a slightly different prepared dataset from this deployment, comprising 9{,}962 micro-survey responses from 106 participants, and focuses on characterizing the reported experience rather than the intervention outcomes. 
 
 Figure~\ref{fig:cozie-microsurvey} illustrates the set of micro-survey questions answered directly on the watch face at each full submission instance.
@@ -442,7 +443,7 @@ Exposure and scope raise a final pair of limitations, beginning with the weather
 Finally, the deployment ran in two phases that differed in how just-in-time messages were triggered, and the present analysis pools across them, so it characterizes reported experience and does not isolate any effect the intervention messages may have had on what participants reported or did.
 
 \subsection{Future work}\label{sec:disc-future}
-The most direct next step is to broaden the cohort through larger deployments that run on participants' own smartwatches, rather than on loaned devices, which could reach hundreds or thousands of people and a wider mix of ages, occupations, and living situations than the mostly student sample here.
+The most direct next step is to broaden the cohort through larger deployments that run fully on participants' own smartwatches with remote self-onboarding, which could reach thousands or tens of thousands of people and a wider mix of ages, occupations, and living situations.
 A more diverse cohort would allow the reported patterns to be tested for generalizability rather than described for one group, and replication in other cities would show which findings are specific to a dense, tropical, air-conditioned setting and which hold more broadly.
 
 Future analyses could also treat the nested structure of the data directly, using mixed-effects or otherwise participant-grouped models that account for repeated responses from the same person, turning the descriptive associations reported here into estimates with proper uncertainty and supporting participant-grouped validation for any predictive work built on the same data. Exposure measurement could improve by pairing the micro-surveys with personal or wearable microclimate and air-quality sensing, such as on-body temperature, humidity, and sound level, where guidance on low-cost sensors is now maturing \citep{Parkinson2026-am}, which would replace the coarse nearest-station weather with the conditions each participant actually experienced and would matter most in the indoor and air-conditioned settings that dominate the responses.
@@ -476,7 +477,7 @@ The authors declare that they have no known competing financial interests or per
 This research was supported by the Singapore Ministry of Education (MOE) Tier 1 Grants titled \textit{The Internet-of-Buildings (IoB) Platform -- Testing of Visual Analytics for AI Technologies towards a Well and Green Built Environment} (A-0008305-01-00) and Ecological Momentary Assessment (EMA) for Built Environment Research (A0008301-01-00).
 
 \section*{Data availability statement}
-The data and code supporting the findings of this study are available on GitHub at \url{https://github.com/buds-lab/cozie-singapore-journal}. 
+The data, code, and documentation supporting the findings of this study are available on GitHub at \url{https://github.com/buds-lab/cozie-singapore-journal}. 
 
 % ============================================================================
 % References
