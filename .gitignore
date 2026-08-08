@@ -12,3 +12,5 @@
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
+data/.DS_Store
+figures/.DS_Store
