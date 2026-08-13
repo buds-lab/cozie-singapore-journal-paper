@@ -72,12 +72,12 @@ Capturing perception directly has a long methodological basis in ecological mome
 Geographically-explicit ecological momentary assessment (GEMA) developed as a set of methods to record momentary subjective states together with the location in which they occur, and it has been applied across public health and urban analysis \citep{Kirchner2016-dq}.
 It has been used to link the daily acoustic environment to real-time noise annoyance \citep{Zhang2020-bq} and to relate exposure to natural diversity to momentary mental wellbeing \citep{Hammoud2024-pb}.
 Standardized architectures and reporting guidelines have since emerged to make these studies more comparable and reproducible \citep{Gharani2021-hx,Kingsbury2024-qe}.
-The open-source Cozie platform takes this approach a step further by delivering micro-surveys directly on a smartwatch and pairing each response with the device's onboard physiological and environmental sensors \citep{Tartarini2023-iu}.
-Wearables are increasingly used in this way to capture indoor and environmental quality alongside the people experiencing it \citep{Abboushi2022-ot}, and consumer smartwatches can measure exposures such as ambient noise with useful accuracy \citep{Fischer2022-lv}.
+Wearables are increasingly used to capture indoor and environmental quality alongside the people experiencing it \citep{Abboushi2022-ot}, and consumer smartwatches can measure exposures such as ambient noise with useful accuracy \citep{Fischer2022-lv}.
 Citizen-science deployments have likewise shown that non-experts equipped with consumer devices can map urban noise pollution at scale \citep{Zipf2020-br}.
-The micro-survey approach has since been applied to characterize sleep habits and bedroom environments, showing its reach beyond a single exposure \citep{Miller2025-ne}.
+The open-source Cozie platform takes this approach a step further by delivering micro-surveys directly on a smartwatch and pairing each response with the device's onboard physiological and environmental sensors \citep{Tartarini2023-iu}.
+The Cozie-based micro-survey approach has recently been applied to characterize sleep habits and bedroom environments \citep{Miller2025-ne}.
 
-This study was developed as a follow-on effort to scale up this type of data collection, with a focus on heat and noise in the urban context.
+This study was developed as an effort to scale up this type of data collection, with a focus on heat and noise in the urban context.
 Both exposures are central to the everyday experience of a dense tropical city, where thermal comfort is a persistent concern and noise is a leading source of distraction and dissatisfaction \citep{Appel-Meulenbroek2020-bp}.
 Individuals also differ substantially in how they perceive the same conditions, which has driven a shift toward personal comfort models built at the level of the person rather than the building, since people differ in their intrinsic thermal sensitivity \citep{Wang2018-aj,Arakawa_Martins2022-vh,Rupp2022-lq}.
 Linking these reports to geolocated urban context connects them to the digital-twin models increasingly used to represent cities \citep{Ignatius2024-ii}.
@@ -94,11 +94,11 @@ Because the platform continuously records location and physiological signals, th
 The remainder of this section describes the field study and participants, the structure of the micro-survey, the linked wearable, weather, and urban-context data, and the processing steps that produce the survey-level dataset used for the characterization that follows.
 
 \subsection{Crowdsourced watch-based micro-survey and physiological and environmental data}\label{sec:methods-context}
-The field study reported here is the same deployment described in detail by \citet{Miller2025-sv}, and the following is a summary of that protocol. 
+The field study methodology reported here is the same deployment described in detail by \citet{Miller2025-sv}, and the following is a summary of that protocol. 
 The key elements of the protocol that are used in this analysis are illustrated in Figure~\ref{fig:cozie-study-design}.
 Participants were recruited through the National University of Singapore (NUS) Student Work Scheme and by word of mouth, producing a pool made up mostly of NUS students together with a smaller number of adults from outside the university.
 The cohort was predominantly young, with roughly 73\% aged 18 to 30, and comprised 39\% male and 61\% female participants, and ethical approval was granted by the NUS Institutional Review Board.
-Each participant used an Apple Watch running the Cozie application paired with an iPhone, and loan devices were provided to those who lacked a compatible watch or phone.
+Each participant used an Apple Watch running the Cozie application paired with an iPhone, and loan devices were provided to those who lacked a compatible smartwatch.
 Participants were asked to wear the watch during working hours, at least from 9\,AM to 7\,PM on weekdays, for approximately four weeks.
 They were instructed to complete 100 micro-surveys together with weekly surveys and an in-person exit interview. 
 Some participants provided responses outside the parameters in these guidelines, and those submitted within Singapore were retained in this analysis.
@@ -110,7 +110,6 @@ Some participants provided responses outside the parameters in these guidelines,
 \label{fig:cozie-study-design}
 \end{figure}
 
-The deployment ran in two phases that differed in how JITAI messages were triggered.
 As shown in Figure~\ref{fig:cozie-study-design}, each watch-based micro-survey response is time-stamped and geolocated, and is paired with the wearer's onboard physiological signals and with linked outdoor weather and urban-context data.
 The present analysis draws on a slightly different prepared dataset from this deployment, comprising 9{,}962 micro-survey responses from 106 participants, and focuses on characterizing the reported experience rather than the intervention outcomes. 
 
@@ -140,7 +139,7 @@ The nearest weather-station observations were aggregated over the same three win
 These health and weather aggregates were then merged back onto the survey rows and checked for consistency, yielding one analysis-ready record per response that includes the original survey and location fields, along with the linked physiological, weather, and urban-context features used throughout the analysis.
 
 The reported experience was then characterized against the reported space type using the analysis-ready record described above.
-Each response was assigned to one of the space types, and each categorical perception variable was cross-tabulated with the space type to form the contingency tables used below.
+Each response was categorized into one of the space types based on that survey response, and each categorical perception variable was cross-tabulated with the space type to form the contingency tables used below.
 Conditional questions, such as noise type and earphone use, have lower coverage, so their profiles describe only the responses for which follow-up was observed.
 Because responses are clustered within participants, the significance markers reported below are treated as descriptive screens, and effect sizes and the coherence of contrasts across related variables are used as the primary read-outs. The three methods below produce the perceptual characterization used for analysis.
 
@@ -182,7 +181,7 @@ Under independence, each $z_{ij}$ is asymptotically standard normal, so cells wi
 \section{Results}\label{sec:results}
 % ============================================================================
 
-The collected data support an analysis that moves from the volume, coverage, and timing of the responses, to the distributions of the survey and its linked physiological and weather measurements, and then to how the reported experience differs across the everyday spaces in which it was recorded.
+The collected data support an analysis focused on the volume, coverage, and timing of the responses, as well as the distributions of the survey and its linked physiological and weather measurements. The analysis then focused on how the reported experience differs across the everyday spaces in which it was recorded.
 
 \subsection{Data collection, coverage, and temporal characteristics}\label{sec:res-data-collection}
 
@@ -208,20 +207,19 @@ The range from 17 to 158 responses does mean that some participants are somewhat
 \end{figure}
 
 The temporal cadence in Figure~\ref{fig:data-d2-temporal-cadence} reflects a protocol built around the working day.
-Responses concentrate sharply between 9\,AM and 7\,PM and peak in the mid-afternoon, and weekdays account for all but about 17\% of the data, so the dataset captures waking, active hours far more than nights or weekends.
+Responses concentrate sharply between 9\,AM and 7\,PM and peak in the mid-afternoon, and weekdays account for all but about 17\% of the data, so the dataset captures waking, active hours more than nights or weekends.
 The calendar-week panel shows the response volume rising and falling with the phased recruitment of participants.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/data_characterization/weekly_temporal_cadence.pdf}
-\caption{Temporal cadence of survey responses in Singapore local time by hour of day (left), day of week (middle), and calendar week (right).}
+\caption{Time frames of survey responses in Singapore local time by hour of day (left), day of week (middle), and calendar week (right).}
 \label{fig:data-d2-temporal-cadence}
 \end{figure}
 
-Timing is normalized within each space type in Figure~\ref{fig:data-d4-space-time}, so it reads as a set of temporal signatures for when each kind of space is used.
-Offices and classrooms are almost only weekday, daytime settings, with about 96\% of office responses on weekdays, while home stretches into the evening and holds the largest weekend share of any space.
-The commute spaces give the sharpest signatures, as outdoor and transportation responses break from the mid-afternoon indoor peak and rise in the early evening around 18:00 to 19:00.
-Timing alone already begins to separate the spaces before any perception is considered.
+Timing is normalized within each space type in Figure~\ref{fig:data-d4-space-time}, so it reads as a set of temporal signatures for when data is provided in that category.
+Offices and classrooms are almost exclusively weekday, daytime settings, with about 96\% of office responses on weekdays, while home stretches into the evening and holds the largest weekend share of any space.
+The commute environments have a unique fingerprint, as outdoor and transportation responses have peakes in the morning and early evening following commute patterns.
 
 \begin{figure}[htbp]
 \centering
@@ -231,18 +229,16 @@ Timing alone already begins to separate the spaces before any perception is cons
 \end{figure}
 
 \subsection{Survey responses and linked temporal data coverage}\label{sec:res-survey-overview}
-Figure~\ref{fig:data-a1-survey-battery} gives the overall distribution of every question, and read together the panels sketch the typical moment a participant reported.
-Thermal preference is strongly asymmetric, with a small majority wanting \emph{No change} (54\%), almost all of the rest wanting to be \emph{Cooler} (40\%), and \emph{Warmer} rare (6\%).
-This is the expected pattern for a warm, humid climate, though it also reflects that many indoor spaces are air-conditioned rather than exposed to the outdoor weather.
+Figure~\ref{fig:data-a1-survey-battery} gives the overall distribution of every question and these data provide the breakdown of the participant self-assessments.
+Thermal preference is asymmetric, with a small majority wanting \emph{No change} (54\%), with much of the rest wanting to be \emph{Cooler} (40\%), and \emph{Warmer} more rare (6\%).
+This pattern is expected for a warm, humid climate, though it also reflects that many indoor spaces are air-conditioned rather than exposed to the outdoor weather.
 Perceived noise distraction is more balanced, with roughly equal shares reporting \emph{None} (46\%) and \emph{A little} (44\%) and only about one in ten reporting \emph{A lot}.
-Noticing some noise is the norm, while strong distraction is uncommon.
-Where noise is present, the follow-up question most often attributes it to people talking (44\% of noise-type responses), well ahead of appliances and traffic, so the main acoustic nuisance in this cohort is human rather than mechanical.
-
-The other panels place these responses in context.
+Noticing some noise is the norm, while a strong distraction is uncommon.
+Where noise is present, the follow-up question most often attributes it to people talking (44\% of noise-type responses), well ahead of appliances and traffic.
 Most responses come from home (45\%), participants are usually \emph{Alone} (72\%) rather than in a \emph{Group}, and the activity questions show focused work and leisure in solitary moments and socializing in group ones.
-Earphone use is uncommon, even though the question is included in about half of surveys, as most responses report \emph{No earphones}, and active noise canceling is rare.
-Participants therefore seem to tolerate rather than mask their sound environment.
-The coverage panel shows that linked analysis is feasible with the one-hour pre-survey window including weather for about 96\% of surveys and heart rate, movement, and measured noise for roughly 90\%, so nearly every self-report has matching sensor data.
+Earphone (or audio headphone) use is uncommon, even though the question is included in about half of surveys, as most responses report \emph{No earphones}, and active noise canceling is rare.
+Therefore, participants seem to tolerate rather than mask their sound environment.
+The coverage panel shows that linked analysis is feasible with the one-hour pre-survey window, including weather for about 96\% of surveys and heart rate, movement, and measured noise for roughly 90\%, so nearly every self-report has matching sensor data.
 
 \begin{figure}[htbp]
 \centering
@@ -251,10 +247,9 @@ The coverage panel shows that linked analysis is feasible with the one-hour pre-
 \label{fig:data-a1-survey-battery}
 \end{figure}
 
-The same responses appear as a flow through the questions in Figure~\ref{fig:survey-response-flow}, which makes the conditional structure clearer than the separate bars can.
-Reading from left to right, each answer splits into the next question, the conditional branches such as noise kind and earphones carry only the half of responses that reach them, and activity divides by whether the participant is \emph{Alone} or in a \emph{Group}.
-The ribbon widths are drawn to scale, so the proportion of every category can be compared in a single view.
-The common home, solitary, and \emph{No change} or \emph{Cooler} responses form the thick central spine, and the rarer categories taper into thin branches.
+The same responses appear as a flow through the questions in Figure~\ref{fig:survey-response-flow}, which makes the conditional structure clearer through a sankey diagram.
+Reading from left to right, each answer splits into the next question, the conditional branches, such as noise kind and earphones, carry only half of the responses that reach them, and activity is divided by whether the participant is \emph{Alone} or in a \emph{Group}.
+The ribbon widths are drawn to scale, so the proportion of every category shows that the common categories such as \emph{No change} or \emph{Cooler} are more prominent.
 
 \begin{figure}[htbp]
 \centering
@@ -263,21 +258,20 @@ The common home, solitary, and \emph{No change} or \emph{Cooler} responses form 
 \label{fig:survey-response-flow}
 \end{figure}
 
-The linked wearable health streams appear in Figure~\ref{fig:data-a2-health-windows}, each summarized over the six-hour, one-hour, and ten-minute windows preceding a survey.
-The window matters most for the movement metrics.
+The linked wearable health streams are shown in Figure~\ref{fig:data-a2-health-windows} with each parameter summarized over the six-hour, one-hour, and ten-minute windows preceding a survey.
 Median step count and walking distance fall as the window narrows, from about 85 to 42 steps per reading between the six-hour and ten-minute windows, because a short look-back captures only the last few minutes of activity.
 Heart rate is more stable at roughly 80\,bpm across all three windows.
 Coverage moves the other way and limits how tight the window can be.
-The six-hour window carries movement and noise for over 95\% of surveys, but at ten minutes audio coverage falls to about a third and step coverage to little more than half.
+The six-hour window carries movement and noise for over 95\% of surveys, but at ten minutes, audio coverage falls to about a third, and step coverage to little more than half.
 Resting heart rate and blood-oxygen streams are sparse in every window.
-The one-hour window is used as the working aggregate throughout, since it maintains coverage near 90\% while staying close to the survey moment.
+The one-hour window is used as the aggregate method throughout the rest of this analysis, since it maintains coverage near 90\% while staying close to the survey moment.
 
 Figure~\ref{fig:data-a3-weather-windows} summarizes the nearest-station outdoor weather over the same windows, and its distributions are narrow and stable, as expected for an equatorial climate.
 Air temperature has a median near 29\,\textdegree C and relative humidity near 73\%, which gives a heat index around 34\,\textdegree C that changes little across the windows.
-The outdoor thermal environment is consistently warm whatever the look-back length.
+The outdoor thermal environment is consistently warm, whatever the window length.
 Rainfall is the one strongly window-dependent feature because it accumulates over time, with about 28\% of six-hour windows containing some rain against only 5\% of ten-minute windows.
-These values describe outdoor conditions at a station a median of roughly 3\,km from the response.
-As noted above, they are not the participant's actual microclimate, which is often indoor and air-conditioned.
+These values describe outdoor conditions at a station, a median of roughly 3\,km, from the response.
+It should be noted that these data are not the participant's actual microclimate, which is often indoor and air-conditioned.
 
 \begin{figure}[htbp]
 \centering
@@ -301,14 +295,13 @@ Across all responses, the share of \emph{Cooler} answers rises with outdoor heat
 This situation is expected for a tropical setting, though the outdoor reading is only a proxy for the participant's actual microclimate, which is often a controlled indoor space rather than the outdoor weather.
 The link between people is weaker than within the heat range.
 A participant's mean outdoor temperature explains little about who wants cooling ($r \approx 0.33$), and the per-participant panel is very wide, with the \emph{Cooler} share ranging from under 10\% for the most heat-tolerant participants to nearly 80\% for the most cooling-seeking participants.
-This spread is the main point of the figure, showing that cooling preference is as much a personal trait as a response to measured conditions, the individual variation that person-level sensing is designed to capture.
+This spread is a key takeaway of the figure, showing that cooling preference is as much a personal trait as a response to measured conditions, the individual variation that person-level sensing is designed to capture.
 
-The same characterization for the sound environment is given in Figure~\ref{fig:data-g1-noise}, using the linked one-hour sound-level measurement, and here the self-reports and the sensor agree well.
+The same type of characterization for the sound environment is given in Figure~\ref{fig:data-g1-noise}, using the linked one-hour sound-level measurement, and here the self-reports and the sensor agree well.
 Measured sound level rises steadily with perceived noise, from a median near 62\,dB for \emph{None} to 66\,dB for \emph{A little} and 70\,dB for \emph{A lot}.
 The separation is consistent despite the coarse three-point scale.
-The measured levels also track where people are, with home and office the quietest settings at around 62\,dB while other-indoor, transportation, and outdoor environments sit near 69 to 70\,dB, and the sources most often reported as loud, traffic and talking, carrying the highest levels.
-Together the two figures frame the analysis that follows.
-Thermal preference is a personal signal that only loosely tracks the surrounding environment, while noise perception is tied to a measurable exposure that varies with the space around the participant.
+The measured levels also track where people are, with home and office the quietest settings at around 62\,dB while other-indoor, transportation, and outdoor environments sit near 69 to 70\,dB, and the sources most often reported as loud, traffic and talking, carry the highest levels.
+When analyzed together, the two figures show that thermal preference is a personal signal that only loosely tracks the surrounding environment, while noise perception is tied to a measurable exposure that varies with the space around the participant.
 
 \begin{figure}[htbp]
 \centering
@@ -393,8 +386,8 @@ Each entry pairs a short insight with the supporting detail drawn from the finge
 \footnotesize
 \renewcommand{\arraystretch}{1.3}
 \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash\bfseries}p{0.30\textwidth} >{\raggedright\arraybackslash}X@{}}
-\toprule
-\multicolumn{2}{@{}l@{}}{\textbf{Acoustic insights reinforcing intuition}} \\
+% \toprule
+% \multicolumn{2}{@{}l@{}}{\textbf{Acoustic insights reinforcing intuition}} \\
 \midrule
 Commute spaces are the noisiest & Transportation and outdoor responses carry the highest \emph{a lot} noise shares ($\approx 25\%$ and $22\%$), against only about 3\% at home. \\
 Home and offices are the quietest settings & Both sit near a 62\,dB median sound level, the lowest among the measured spaces. \\
@@ -413,8 +406,8 @@ Talking defines indoor noise & Talking dominates the acoustic complaints of clas
 \footnotesize
 \renewcommand{\arraystretch}{1.3}
 \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash\bfseries}p{0.30\textwidth} >{\raggedright\arraybackslash}X@{}}
-\toprule
-\multicolumn{2}{@{}l@{}}{\textbf{Environmental insights supporting previous work}} \\
+% \toprule
+% \multicolumn{2}{@{}l@{}}{\textbf{Environmental insights supporting previous work}} \\
 \midrule
 Home is overwhelmingly solitary & About 84\% of home responses report being \emph{alone}, the most solitary setting measured. \\
 Classrooms are the most social setting & Classrooms are the most group-oriented space, with a group lift near 2.1. \\
@@ -443,8 +436,8 @@ Tables~\ref{tab:insights-counterintuitive} and~\ref{tab:insights-behaviour} gath
 \footnotesize
 \renewcommand{\arraystretch}{1.3}
 \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash\bfseries}p{0.30\textwidth} >{\raggedright\arraybackslash}X@{}}
-\toprule
-\multicolumn{2}{@{}l@{}}{\textbf{Environmental insights for further exploration}} \\
+% \toprule
+% \multicolumn{2}{@{}l@{}}{\textbf{Environmental insights for further exploration}} \\
 \midrule
 Thermal preference is the weakest spatial signal & Its association with space type (Cram\'er's V $\approx 0.12$) sits far below activity or noise. \\
 Cooling demand separates spaces only modestly & Outdoor demand ($\approx 53\%$) exceeds home ($\approx 43\%$) by less than an air-conditioning-driven intuition would suggest. \\
@@ -463,8 +456,8 @@ Lift exposes hidden distinctiveness & \emph{A lot} of noise is $\approx 2.6\time
 \footnotesize
 \renewcommand{\arraystretch}{1.3}
 \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash\bfseries}p{0.30\textwidth} >{\raggedright\arraybackslash}X@{}}
-\toprule
-\multicolumn{2}{@{}l@{}}{\textbf{Method-based and behavorial insights for further exploration}} \\
+% \toprule
+% \multicolumn{2}{@{}l@{}}{\textbf{Method-based and behavorial insights for further exploration}} \\
 \midrule
 Behavior separates spaces best & What a person is doing distinguishes space types more sharply than any environmental variable. \\
 Home is distinctively, not just frequently, solitary & Even against an already alone-dominated corpus, home's alone lift exceeds one. \\
@@ -489,7 +482,7 @@ The acoustic findings point most directly to design action.
 Commute and outdoor spaces hold the loudest and most traffic-driven noise, with about a quarter of transportation responses reporting \emph{a lot} of noise against only about 3\% at home, so traffic calming, acoustic buffering along transit corridors, and quieter routing would help where distraction is worst.
 Indoors, talking rather than traffic dominates the noise reported in classrooms and offices, echoing evidence that intelligible background speech is the principal office distractor \citep{Jahncke2016-il} and reflecting the trade-off between privacy and communication in open-plan layouts \citep{Kim2013-gs}, so the fix there is acoustic treatment and layout that manage speech and reverberation.
 
-The thermal results carry an energy message for a tropical, heavily air-conditioned city.
+The thermal results are related to energy policy and design considerations for a tropical, heavily air-conditioned city.
 Offices show the lowest cooling demand of any space, with only about a quarter of responses wanting \emph{cooler} and occasional \emph{warmer} requests where cooling overshoots, which suggests that relaxing indoor setpoints could save cooling energy at little cost to comfort.
 Outdoor spaces show the highest cooling demand, which points to shading, greenery, and other passive cooling of public space as the priority for thermal relief.
 Thermal preference is the weakest spatial marker and reflects the immediate controlled setting more than the outdoor weather, so comfort here is set mainly by the indoor environments people occupy rather than by climate alone.
@@ -499,7 +492,7 @@ Because the same watch-based platform has already supported city-scale predictio
 Heat and noise are only two of the dimensions such an instrument can capture, and the same loop could be closed for others.
 
 \subsection{Limitations}\label{sec:disc-limitations}
-Generalizability is the clearest limitation, as the findings come from 106 participants in a young and homogeneous cohort, with roughly 73\% aged 18 to 30 and most recruited as university students.
+Generalizability is a limitation in this analysis as the findings come from 106 participants in a young and homogeneous cohort, with roughly 73\% aged 18 to 30 and most recruited as university students.
 Recruitment was by convenience rather than through a representative sampling frame, so the reported patterns describe this cohort in Singapore and should not be read as population-level estimates.
 The setting itself also limits transfer, since Singapore is a dense, tropical, heavily air-conditioned city, and the thermal results in particular reflect that context more than a general climate response.
 
@@ -508,8 +501,8 @@ We therefore treat the associations and significance markers as descriptive scre
 Perceptions are self-reported through single-item micro-surveys answered in the moment, and the reported space type is a participant label rather than a verified location, so both carry the usual subjectivity and recall effects of momentary self-report.
 
 Uneven coverage across the dataset qualifies the finer comparisons, beginning with the conditional follow-up questions such as noise kind, activity, and earphone use, which are answered only by the responses that reach them and so rest on smaller samples than the always-asked items.
-Within-space cells built from few responses are noisier than their shading suggests, because no smoothing or shrinkage is applied.
-Linked streams are also uneven, as some physiological signals such as blood-oxygen and resting heart rate are sparse, and the early-morning hours are thinly sampled, with under 2\% of responses before 08:00, so temporal patterns in those hours are weak.
+Within-space cells built from a few responses are noisier than their shading suggests, because no smoothing or shrinkage is applied.
+Linked streams are also uneven, as some physiological signals, such as blood oxygen and resting heart rate, are sparse, and the early-morning hours are thinly sampled, with under 2\% of responses before 08:00, so temporal patterns in those hours are weak.
 The space types themselves are unbalanced, with nearly half of all responses coming from home, so the corpus-wide baselines used for lift are weighted toward the most common settings.
 
 Exposure and scope raise a final pair of limitations, beginning with the weather values, which are aggregated from the nearest station and describe ambient outdoor conditions rather than the microclimate or skin-level exposure each participant actually experienced, a coarse proxy especially for the indoor and air-conditioned settings where many responses were made.
@@ -519,18 +512,26 @@ Finally, the deployment ran in two phases that differed in how just-in-time mess
 The most direct next step is to broaden the cohort through larger deployments that run fully on participants' own smartwatches with remote self-onboarding, which could reach thousands or tens of thousands of people and a wider mix of ages, occupations, and living situations.
 A more diverse cohort would allow the reported patterns to be tested for generalizability rather than described for one group, and replication in other cities would show which findings are specific to a dense, tropical, air-conditioned setting and which hold more broadly.
 
-Future analyses could also treat the nested structure of the data directly, using mixed-effects or otherwise participant-grouped models that account for repeated responses from the same person, turning the descriptive associations reported here into estimates with proper uncertainty and supporting participant-grouped validation for any predictive work built on the same data. Exposure measurement could improve by pairing the micro-surveys with personal or wearable microclimate and air-quality sensing, such as on-body temperature, humidity, and sound level, where guidance on low-cost sensors is now maturing \citep{Parkinson2026-am}, which would replace the coarse nearest-station weather with the conditions each participant actually experienced and would matter most in the indoor and air-conditioned settings that dominate the responses.
+Future analyses could also treat the nested structure of the data directly, using mixed-effects or otherwise participant-grouped models that account for repeated responses from the same person, turning the descriptive associations reported here into estimates with proper uncertainty and supporting participant-grouped validation for any predictive work built on the same data. 
+Exposure measurement could improve by pairing the micro-surveys with personal or wearable microclimate and air-quality sensing, such as on-body temperature, humidity, and sound level, where guidance on low-cost sensors is now maturing \citep{Parkinson2026-am}, which would replace the coarse nearest-station weather with the conditions each participant actually experienced and would matter most in the indoor and air-conditioned settings that dominate the responses.
 
 The survey design itself could become more targeted, with prompts that adapt to where a person is and to the specific subjective question a deployment is meant to answer, concentrating responses where they are most informative and filling the thinly sampled settings and hours noted above.
-Building on this, a deeper characterization of participants who share behavioral patterns could establish behavioral archetypes, helping identify which patterns to encourage through design and which to discourage before they become common. In addition, longer and more structured deployments would extend the scope, since running over months rather than weeks would capture seasonal and longer-term variation, and designs that separate or randomize the just-in-time intervention phases would let future work isolate the effect of the messages on reported experience and behavior, which the present pooled analysis cannot.
+Building on this, a deeper characterization of participants who share behavioral patterns could establish behavioral archetypes, helping identify which patterns to encourage through design and which to discourage before they become common. 
+In addition, longer and more structured deployments would extend the scope, since running over months rather than weeks would capture seasonal and longer-term variation, and designs that separate or randomize the just-in-time intervention phases would let future work isolate the effect of the messages on reported experience and behavior, which the present pooled analysis cannot.
 
 % ============================================================================
 \section{Conclusion}\label{sec:conclusion}
 % ============================================================================
 
-This paper characterizes the everyday human experience of urban space types in a dense tropical city using scalable, crowdsourced smartwatch micro-surveys. A field deployment of the open-source Cozie platform in Singapore collected 9{,}962 geolocated responses from 106 participants, each linking self-reported thermal preference, noise, social context, and activity to onboard physiological and linked weather data. The reported experience was characterized across six everyday space types through conditional perception fingerprints, relative distinctiveness, and effect-size-based association testing.
-The central result is that what people do and hear separates urban spaces far more clearly than how warm they feel. Activity and the kind of noise are the strongest spatial markers, while thermal preference is the weakest, reflecting the heavily air-conditioned indoor settings that dominate daily life more than the outdoor climate. Commute spaces emerge as the loudest and most traffic-driven, indoor spaces are defined by talking, and cooling demand is lowest in offices and highest outdoors.
-Much of this reinforces intuition, but the value of the approach is that it recovers and quantifies these signatures directly from lived, in-situ reports rather than from assumptions built into design. The method also has clear limits, from a young and homogeneous cohort to responses nested within participants and ambient rather than personal exposure, each of which points to a direction for future work. Taken together, the results show that a wrist-based micro-survey can provide a human-centered evidence base for noise mitigation and for energy-conscious, thermal-comfort-aware urban design, and they set the stage for larger and more diverse deployments across cities.
+This paper characterizes the everyday human experience of urban space types in a dense tropical city using scalable, crowdsourced smartwatch micro-surveys. 
+A field deployment of the open-source Cozie platform in Singapore collected 9{,}962 geolocated responses from 106 participants, each linking self-reported thermal preference, noise, social context, and activity to onboard physiological and linked weather data. 
+The reported experience was characterized across six everyday space types through conditional perception fingerprints, relative distinctiveness, and effect-size-based association testing.
+The central result is that what people do and hear separates urban spaces more clearly than how warm they feel. 
+Activity and the kind of noise are the strongest spatial markers, while thermal preference is the weakest, reflecting the heavily air-conditioned indoor settings that dominate daily life more than the outdoor climate. 
+Commute spaces emerge as the loudest and most traffic-driven, indoor spaces are defined by talking, and cooling demand is lowest in offices and highest outdoors.
+Much of this reinforces intuition, but the value of the approach is that it recovers and quantifies these signatures directly from lived, in-situ reports rather than from assumptions built into design. 
+The method also has clear limits, from a young and homogeneous cohort to responses nested within participants and ambient rather than personal exposure, each of which points to a direction for future work. 
+Taken together, the results show that a wrist-based micro-survey can provide a human-centered evidence base for noise mitigation and for energy-conscious, thermal-comfort-aware urban design, and they set the stage for larger and more diverse deployments across cities.
 
 % ============================================================================
 \section*{Acknowledgments}
