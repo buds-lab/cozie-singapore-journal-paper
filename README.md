@@ -10,9 +10,8 @@ phases distinguished by how just-in-time intervention (JITAI) messages were trig
 paper characterizes the **reported experience** across everyday urban spaces rather than the
 intervention outcomes.
 
-This public repository contains the manuscript source, the
-public privacy-protected dataset, and a companion notebook that both documents the study and
-regenerates every data-derived figure. It does **not** contain any personal or private participant data and some of the research data has been obfuscated or removed to greatly reduce any risk of participant identification.
+This public repository contains the manuscript source, the privacy-protected dataset, and a companion notebook that both documents the study and
+regenerates every data-derived figure. It does **not** contain any personal or private participant data, and even some of the non-private research data has been obfuscated or removed to reduce any risk of participant identification.
 
 ## Related publications and research lineage
 
