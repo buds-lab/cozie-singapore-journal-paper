@@ -1,5 +1,15 @@
 ## Cozie Singapore: Scalable crowdsourced smartwatch micro-surveys to capture longitudinal in-situ urban heat and noise perception
 
+[![Cite preprint](https://img.shields.io/badge/Cite-SSRN%207407399-8A1F11?logo=ssrn&logoColor=white)](https://ssrn.com/abstract=7407399)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey?logo=creativecommons&logoColor=white)](https://creativecommons.org/licenses/by-nc/4.0/)
+![Dataset](https://img.shields.io/badge/Dataset-9%2C962%20micro--surveys-2E7D32)
+![Participants](https://img.shields.io/badge/Participants-106-1F6FEB)
+![Study location](https://img.shields.io/badge/Study%20location-Singapore-EA580C)
+![Focus](https://img.shields.io/badge/Focus-Urban%20heat%20%26%20noise-7C3AED)
+![Reproducibility](https://img.shields.io/badge/Figures-Reproducible%20from%20notebook-0F766E)
+
+⌚ 🏙️ 🌡️ 🔊
+
 Public repository for the paper titled **Cozie Singapore: Scalable crowdsourced smartwatch
 micro-surveys to capture longitudinal in-situ urban heat and noise perception**, using
 Cozie-Apple data collected in Singapore. The analyzed dataset comprises **9,962 geolocated
@@ -12,6 +22,16 @@ intervention outcomes.
 
 This public repository contains the manuscript source, the privacy-protected dataset, and a companion notebook that both documents the study and
 regenerates every data-derived figure. It does **not** contain any personal or private participant data, and even some of the non-private research data has been obfuscated or removed to reduce any risk of participant identification.
+
+## How to cite
+
+If you use this paper or dataset, please cite the following preprint:
+
+> Miller, Clayton, Mario Frei, and Yun Xuan Chua. (2026, August 1). *Cozie Singapore: Scalable Crowdsourced Smartwatch Micro-Surveys to Capture Longitudinal In-Situ Urban Heat and Noise Perception*. Available at [SSRN: 7407399](https://ssrn.com/abstract=7407399) or [https://doi.org/10.2139/ssrn.7407399](https://doi.org/10.2139/ssrn.7407399).
+
+## License
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/). See [`LICENSE`](./LICENSE) for the full terms.
 
 ## Related publications and research lineage
 

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this paper or dataset, please cite this preprint."
+type: article
+title: "Cozie Singapore: Scalable Crowdsourced Smartwatch Micro-Surveys to Capture Longitudinal In-Situ Urban Heat and Noise Perception"
+authors:
+  - family-names: Miller
+    given-names: Clayton
+  - family-names: Frei
+    given-names: Mario
+  - family-names: Chua
+    given-names: Yun Xuan
+date-released: 2026-08-01
+license: CC-BY-NC-4.0
+identifiers:
+  - type: doi
+    value: 10.2139/ssrn.7407399
+url: "https://ssrn.com/abstract=7407399"
